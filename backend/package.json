@@ -1,0 +1,17 @@
+{
+  "name": "finger-attend",
+  "version": "1.0.0",
+  "description": "FingerAttend automates student attendance using React frontend, Express & Python backend, and MongoDB. Fingerprint recognition tracks students, notifies parents, and enables teacher monitoring. Real-time data, transparency, and easy accessibility redefine attendance management in educational institutions.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "author": "afzal zakirhussain",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2"
+  }
+}
