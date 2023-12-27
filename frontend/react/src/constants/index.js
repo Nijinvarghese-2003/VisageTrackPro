@@ -1,0 +1,1 @@
+export const DEMO_TEXT = "DEMO_TEXT"
