@@ -1,12 +1,5 @@
 const mongoose = require('mongoose');
 
-const departmentSchema = new mongoose.Schema({
-    name: { type: String, required: true },
-    description: { type: String },
-    teachers: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Teacher' }],
-    // Add other relevant fields for the department
-});
-
 const instituteSchema = new mongoose.Schema({
     name: { type: String, required: [true, "please add institute name"] },
     email: { type: String, required: true, unique: [true, "Email address already exists"] },
@@ -22,7 +15,8 @@ const instituteSchema = new mongoose.Schema({
         phone: { type: String },
         website: { type: String },
     },
-    departments: [departmentSchema],
+    departments: { type: [String], required: true },
+    resetCode: { type: String, require: false, default: "" }
 }, {
     timestamps: true
 });

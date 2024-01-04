@@ -1,0 +1,75 @@
+institute
+1, register => (create institute)
+2, login => ( assign token based on created institute) 
+
+institute register example
+-----------------------------
+const newInstituteData = {
+    name: 'Example Institute',
+    email: 'example@institute.com',
+    password: 'securepassword',
+    confirm:'securepassword',
+    address: {
+        street: '123 Main St',
+        city: 'City',
+        state: 'State',
+        zip: '12345',
+        country: 'Country',
+    },
+    contact: {
+        phone: '123-456-7890',
+        website: 'http://exampleinstitute.com',
+    },
+    departments: ['Math', 'Physics'],
+};
+
+institute login example
+---------------------------
+const newInstituteData = {
+    email: 'example@institute.com',
+    password: 'securepassword',
+};
+
+institute update example (same as register)
+-------------------------------------------
+name, email, address, contact, departments, password  => For fields you wish to update, provide the new data in their respective keys. For fields where no updates are required, retain the existing data in their corresponding fields. 
+
+institute request requestForgetPassword (strep 1)
+------------------------------------
+email
+
+institute resetPassword (step 2)
+------------------------------
+resetCode, password, confirm, email 
+
+
+addTeachers example
+-------------------
+const teachersData = [
+    {
+        name: 'Teacher 1',
+        email: 'teacher1@example.com',
+        subject: ['Math', 'Physics'],
+        isAdmin: false,
+        departments: ['Math', 'Physics'],
+        phone: '123-456-7890',
+        place: 'City',
+    },
+    {
+        name: 'Teacher 2',
+        email: 'teacher2@example.com',
+        subject: ['Chemistry', 'Biology'],
+        isAdmin: true,
+        departments: ['Chemistry', 'Biology'],
+        phone: '987-654-3210',
+        place: 'Town',
+    },
+    // Add more teachers as needed...
+];
+
+gettecherByDept example
+----------------
+{"department":"Math"}
+
+
+ADD a resend teacher login link option in ui utilize the update route it will automatically send a new mail 
